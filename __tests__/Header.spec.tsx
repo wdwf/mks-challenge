@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import HomePage from "@/app/pages/home";
 import { Header } from "@/app/components/header";
 
-describe("Home", () => {
+describe("Header", () => {
   it("Renderizar cabeçalho", () => {
     render(<HomePage />);
 
