@@ -1,11 +1,10 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import HomePage from "@/app/pages/home";
 import { Header } from "@/app/components/header";
 
 describe("Header", () => {
   it("Renderizar cabeçalho", () => {
-    render(<HomePage />);
+    render(<Header />);
 
     const heading = screen.getByRole("banner");
 
