@@ -43,9 +43,9 @@ npm run test
 
 - [x] Inicializar a aplicação.
 
-- [ ] Adicionar as bibliotecas necessárias.
+- [x] Adicionar as bibliotecas necessárias.
 
-- [ ] Configurar todas as bibliotecas.
+- [x] Configurar todas as bibliotecas.
 
 - [ ] Seguir uma metodologia de TDD no desenvolvimento.
 
