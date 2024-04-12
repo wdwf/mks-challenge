@@ -8,7 +8,6 @@ export function CardProduct({ product }: { product: ProductProps }) {
 
   function addProductToCart() {
     context.addProductToCart({ item: product!, qty: 1 });
-    console.log("add");
   }
 
   return (
