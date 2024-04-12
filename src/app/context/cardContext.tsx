@@ -131,9 +131,11 @@ export function CartContextProvider<TItemType extends ProductProps>({
   function loadCartFromLocalStorage<
     TItemType extends ProductProps
   >(): CartListItem<TItemType>[] {
-    const cartItems = localStorage.getItem("@MKS:cart");
-    if (cartItems) {
-      return JSON.parse(cartItems);
+    if (typeof window !== "undefined") {
+      const cartItems = localStorage.getItem("@MKS:cart");
+      if (cartItems) {
+        return JSON.parse(cartItems);
+      }
     }
     return [];
   }
@@ -141,12 +143,16 @@ export function CartContextProvider<TItemType extends ProductProps>({
   function saveCartToLocalStorage<TItemType extends ProductProps>(
     cart: CartListItem<TItemType>[]
   ): void {
-    localStorage.setItem("@MKS:cart", JSON.stringify(cart));
+    if (typeof window !== "undefined") {
+      localStorage.setItem("@MKS:cart", JSON.stringify(cart));
+    }
   }
 
   function clearCartToLocalStorage() {
-    localStorage.setItem("@MKS:cart", JSON.stringify([]));
-    setProducts(loadCartFromLocalStorage());
+    if (typeof window !== "undefined") {
+      localStorage.setItem("@MKS:cart", JSON.stringify([]));
+      setProducts(loadCartFromLocalStorage());
+    }
   }
 
   function totalPriceforPaymentMethod() {
