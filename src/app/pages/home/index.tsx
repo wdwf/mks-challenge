@@ -2,38 +2,35 @@ import { Footer } from "@/app/components/footer";
 import { Header } from "@/app/components/header";
 import { getProducts } from "@/app/data/products";
 import { useQuery } from "@tanstack/react-query";
-import React from "react";
 import * as S from "./styles";
+import { Skeleton } from "@/app/components/skeleton";
+import { CardProduct } from "@/app/components/cardProduct";
 
-export default function HomePage() {
-  // const {
-  //   data: products,
-  //   isLoading,
-  //   isError,
-  // } = useQuery({
-  //   queryKey: ["products"],
-  //   queryFn: getProducts,
-  // });
+export function HomePage() {
+  const { data: products, isLoading } = useQuery({
+    queryKey: ["products"],
+    queryFn: getProducts,
+  });
 
   return (
     <S.ContainerHome>
       <Header />
 
-      {/* {isLoading ? (
-        <h2>Carregando...</h2>
+      {isLoading ? (
+        <S.ContainerList>
+          {Array.from({ length: 6 }).map((_, index) => (
+            <Skeleton key={index} width={217} height={285} borderRadius={8} />
+          ))}
+        </S.ContainerList>
       ) : (
-        products?.map((product) => {
-          return (
-            <ul key={product.id}>
-              <li>{product.name}</li>
-            </ul>
-          );
-        })
+        <S.ContainerList>
+          {products?.map((product) => {
+            return <CardProduct product={product} key={product.id} />;
+          })}
+        </S.ContainerList>
       )}
 
-      <div className='footer'>
-        <Footer />
-      </div> */}
+      <Footer />
     </S.ContainerHome>
   );
 }

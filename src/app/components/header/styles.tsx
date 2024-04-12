@@ -8,7 +8,8 @@ export const ContainerHeader = styled.header`
   background: #0f52ba;
   padding: 0 65px;
   width: auto;
-  height: 101px;
+  height: 100px;
+  gap: 10px;
 `;
 
 export const TitleHeader = styled.div`
