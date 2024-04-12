@@ -1,5 +1,12 @@
 # MKS System Challenge
+![nextjs](https://img.shields.io/badge/next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![project language](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![nodejs](https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 
+![Frame 325](https://github.com/wdwf/mks-challenge/assets/28903617/b3bf759d-e61a-43ed-86b8-d5514a273975)
+
+## 💻 Descrição do Projeto
 Projeto para composição de processo seletivo voltado para o frontend.
 
 ## 🧶 Visão Geral
@@ -17,8 +24,8 @@ Mas caso queira executar este projeto no seu dispositivo, deve ter em mente que 
 
 ## 🚚 Instalação
 
-- Clone este repositório: `git clone https://github.com/wdwf/`
-- Navegue até o diretório do projeto: `cd`
+- Clone este repositório: `git clone https://github.com/wdwf/mks-challenge`
+- Navegue até o diretório do projeto: `cd mks-challenge`
 - Instale as dependências: `npm install` ou `yarn install`
 - Rodando o projeto: `npm run dev`
 
