@@ -115,3 +115,15 @@ export const ContainerListItens = styled.div`
   }
 `;
 
+export const ContainerTotalPrice = styled.div`
+  width: 100%;
+  min-width: 352px;
+  height: 64px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+`;
+

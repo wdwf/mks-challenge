@@ -48,6 +48,15 @@ export function ShoppingCart({
             ))
           )}
         </S.ContainerListItens>
+        <S.ContainerTotalPrice>
+          <p>Total:</p>
+          <p>
+            {context.totalPrice.toLocaleString("pt-BR", {
+              style: "currency",
+              currency: "BRL",
+            })}
+          </p>
+        </S.ContainerTotalPrice>
         <button
           className={`finalizePurchase ${montserrat.className}`}
           onClick={() => {
